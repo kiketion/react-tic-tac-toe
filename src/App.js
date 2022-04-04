@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SquareComponent from './SquareComponent';
 
 const initialState = ['', '', '', '', '', '', '', '', ''];
@@ -12,6 +12,38 @@ function App() {
     strings[index] = isXTurn ? 'X' : 'O';
     updateGameState(strings);
     updateIsXTurn(!isXTurn);
+  };
+
+  useEffect(() => {
+    const winner = checkForWinner();
+    if (winner) {
+      alert(`${winner} wins!`);
+      updateGameState(initialState);
+    }
+  }, [gameState]);
+
+  const checkForWinner = () => {
+    const lines = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6],
+    ];
+    for (let i = 0; i < lines.length; i++) {
+      const [a, b, c] = lines[i];
+      if (
+        gameState[a] &&
+        gameState[a] === gameState[b] &&
+        gameState[a] === gameState[c]
+      ) {
+        return gameState[a];
+      }
+    }
+    return null;
   };
 
   return (
