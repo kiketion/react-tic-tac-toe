@@ -67,3 +67,8 @@ code {
 .b-right {
   border-right: 15px solid cadetblue;
 }
+
+.restart-button {
+  width: max-content;
+  margin: 40px auto 10px auto;
+}
