@@ -5,18 +5,18 @@ function App() {
     <div className='app-header'>
       <h1 className='heading-text'>React Tic Tac Toe</h1>
       <div className='row jc-center'>
-        <SquareComponent />
-        <SquareComponent />
-        <SquareComponent />
+        <SquareComponent className='b-bottom-right' />
+        <SquareComponent className='b-bottom-right' />
+        <SquareComponent className='b-bottom' />
       </div>
       <div className='row jc-center'>
-        <SquareComponent />
-        <SquareComponent />
-        <SquareComponent />
+        <SquareComponent className='b-bottom-right' />
+        <SquareComponent className='b-bottom-right' />
+        <SquareComponent className='b-bottom' />
       </div>
       <div className='row jc-center'>
-        <SquareComponent />
-        <SquareComponent />
+        <SquareComponent className='b-right' />
+        <SquareComponent className='b-right' />
         <SquareComponent />
       </div>
     </div>

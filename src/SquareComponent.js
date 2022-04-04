@@ -1,7 +1,9 @@
 import React from 'react';
 
-function SquareComponent() {
-  return <span className='square'>X</span>;
+function SquareComponent(props) {
+  const squareStyle = props.className ? `${props.className} square` : 'square';
+
+  return <span className={squareStyle}>X</span>;
 }
 
 export default SquareComponent;

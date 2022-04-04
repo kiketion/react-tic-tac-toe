@@ -46,6 +46,24 @@ code {
 }
 
 .square {
-  border: 1px solid red;
+  min-width: 100px;
+  min-height: 100px;
+  font-size: 64px;
+  text-align: center;
+  color: cyan;
+  font-weight: bolder;
   padding: 30px;
+}
+
+.b-bottom-right {
+  border-right: 15px solid cadetblue;
+  border-bottom: 15px solid cadetblue;
+}
+
+.b-bottom {
+  border-bottom: 15px solid cadetblue;
+}
+
+.b-right {
+  border-right: 15px solid cadetblue;
 }
